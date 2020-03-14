@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <title>Document</title>
+</head>
+<style>
+    .item{
+        width: 200px;
+        height: 200px;
+        background-color: grey;
+        /* margin: 50px auto; */
+        /* padding-top: 70px; */
+        font-size: 3em;
+        /* text-align: center; */
+        
+
+    }
+</style>
+<body>
+    
+ <div class="item" data-aos="fade-up">1</div>
+
+ <div class="item" data-aos="fade-right">2</div>
+ <div class="item" data-aos="fade-left">3</div>
+ <div class="item" data-aos="fade-up">4</div>
+ <div class="item" data-aos="fade-up">5</div>
+ <div class="item" data-aos="flip-up">6</div>
+ <div class="item" data-aos="fade-left">7</div>
+ <div class="item" data-aos="flip-down">8</div>
+ <div data-aos="fade-up"
+     data-aos-anchor-placement="center-center">
+</div>
+ <script>
+     AOS.init({
+         duration : 1200,
+     })
+ </script>
+</body>
+</html>

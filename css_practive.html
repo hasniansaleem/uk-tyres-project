@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css"> -->
+<link rel="stylesheet" href="style.css">
+<title>Title</title>
+</head>
+<style>
+    .square{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        /* width: 5%;
+        height: 5%; */
+        color: red;
+        border: 2px solid red;
+    }
+    /* tr td{
+        width: 5%;
+        height: 5%;
+    } */
+    #box{
+        width: 150px;
+        height: 150px;
+        background-color: pink;
+        transition-property: width,height,backgroun-color; 
+        transition-duration: 2s,4s,2s;
+        /* transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+        /* transition: all 2s,2s,2s; */
+        /* transition-timing-function: easy-in; */
+        /* transition-timing-function: ease-in-out; */
+        transition-timing-function: linear;
+        transition-delay: 2s;
+            /* properties duration timing-function delay */
+        transition: all 2s linear 1s;
+    }
+    #box:hover{
+/* width: 300px;
+height: 300px; */
+background: orange;
+border-radius: 150px;
+    }
+   
+   #card{
+       width: 300px;
+       height: 300px;
+       position: absolute;
+       top: 50%;
+       left: 50%;
+       line-height: 300px;
+       margin: -150px;
+       background: white;
+       color: yellow;
+       text-align: center;
+       font-synthesis: 40px;
+       box-shadow: 0 0 15px rgba(0,0,0,0.5);
+       /* animation-name: sample; */
+       /* animation-duration: 2s; */
+       /* animation-iteration-count: infinite; */
+       /* animation-direction: alternate; */
+       /* shorthand */
+       animation: sample 2s infinite alternate;
+   }
+   @keyframes sample{
+     0% {border-radius: 0%;}
+       100% { border-radius: 50%; background: tomato; color: cyan;}
+   }
+</style>
+<body style="background: black;">
+
+<!-- <div class="demo-wrapper"> -->
+    <table style="padding: 8px;">
+        <tr>
+            <td class="square"></td>
+            <td class="square"></td>
+            <td class="square"></td>
+            <td class="square"></td>
+            <td class="square"></td>
+            <td class="square"></td>
+            <td class="square"></td>
+            <td class="square"></td>
+            <td class="square"></td>
+            <td class="square"></td>
+        </tr>
+        <tr>
+            <td class="square"></td>
+            <td class="square"></td>
+            <td class="square"></td>
+            <td class="square"></td>
+            <td class="square"></td>
+            <td class="square"></td>
+            <td class="square"></td>
+            <td class="square"></td>
+            <td class="square"></td>
+            <td class="square"></td>
+        </tr>
+        <tr>
+            <td class="square"></td>
+            <td class="square"></td>
+            <td class="square"></td>
+            <td class="square"></td>
+            <td class="square"></td>
+            <td class="square"></td>
+            <td class="square"></td>
+            <td class="square"></td>
+            <td class="square"></td>
+            <td class="square"></td>
+        </tr>
+        <tr>
+            <td class="square"></td>
+            <td class="square"></td>
+            <td class="square"></td>
+            <td class="square"></td>
+            <td class="square"></td>
+            <td class="square"></td>
+            <td class="square"></td>
+            <td class="square"></td>
+            <td class="square"></td>
+            <td class="square"></td>
+        </tr>
+        <tr>
+            <td class="square"></td>
+            <td class="square"></td>
+            <td class="square"></td>
+            <td class="square"></td>
+            <td class="square"></td>
+            <td class="square"></td>
+            <td class="square"></td>
+            <td class="square"></td>
+            <td class="square"></td>
+            <td class="square"></td>
+        </tr>
+        <tr>
+            <td class="square"></td>
+            <td class="square"></td>
+            <td class="square"></td>
+            <td class="square"></td>
+            <td class="square"></td>
+            <td class="square"></td>
+            <td class="square"></td>
+            <td class="square"></td>
+            <td class="square"></td>
+            <td class="square"></td>
+        </tr>
+        <tr>
+            <td class="square"></td>
+            <td class="square"></td>
+            <td class="square"></td>
+            <td class="square"></td>
+            <td class="square"></td>
+            <td class="square"></td>
+            <td class="square"></td>
+            <td class="square"></td>
+            <td class="square"></td>
+            <td class="square"></td>
+        </tr>
+    </table>
+
+<!-- <div id="box"></div> -->
+<!-- <input type="text"> -->
+<!-- <div id="card">hasnain</div> -->
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script> -->
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/js/bootstrap.min.js"></script> -->
+<script src="./anime.min.js">
+</script>
+<script>
+    anime({
+        // targets: '.square',
+        // value: [0,100],
+        // duration: 5000,
+        // round:1
+        targets: '.square',
+  translateX: anime.stagger(10, {grid: [14, 5], from: 'center', axis: 'x'}),
+  translateY: anime.stagger(10, {grid: [14, 5], from: 'center', axis: 'y'}),
+  rotateZ: anime.stagger([0, 90], {grid: [14, 5], from: 'center', axis: 'x'}),
+  delay: anime.stagger(200, {grid: [14, 5], from: 'center'}),
+  loop:true,
+  direction: 'alternate',
+  easing: 'easeInOutQuad'
+    });
+</script>
+</body>
+</html>
